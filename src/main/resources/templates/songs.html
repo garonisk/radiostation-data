@@ -19,7 +19,7 @@
           <th>Title</th>
           <th>Weights</th>
         </tr>
-        <tr th:each="grade: ${song}">
+        <tr th:each="song: ${song}">
           <td th:text="${song.artist}"></td>
           <td th:text="${song.title}"></td>
           <td th:text="${song.weights}"></td>
