@@ -23,6 +23,7 @@
           <td th:text="${song.artist}"></td>
           <td th:text="${song.title}"></td>
           <td th:text="${song.weights}"></td>
+          <td> <a role="button" class="update" th:href="@{/(id = ${song.id})}"> Update</a></td>
         </tr>
       </table>
     </div>

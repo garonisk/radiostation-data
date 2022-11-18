@@ -1,22 +1,17 @@
 package com.rst.radiostationdata;
 
+import java.util.UUID;
+
 public class Song {
 
     private String artist ;
     private String title;
     private double weights;
+    private String id;
 
     public Song() {
-
+        this.id = UUID.randomUUID().toString();
     }
-
-    public Song(String artist, String title, double weights) {
-        this.artist = artist;
-        this.title = title;
-        this.weights = weights;
-    }
-
-
 
     public String getArtist() {
         return artist;
@@ -40,5 +35,13 @@ public class Song {
 
     public void setWeights(double weights) {
         this.weights = weights;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
