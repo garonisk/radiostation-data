@@ -12,8 +12,11 @@
     <div class="container">
       <h2> Web Radio Station </h2>
       <form method="post" th:object="${song}" th:action="@{/handleSubmit}">
+        <p th:errors="*{artist}"></p>
         <input type="text" placeholder="Artist" th:field="*{artist}">
+        <p th:errors="*{title}"></p>
         <input type="text" placeholder="Title" th:field="*{title}">
+        <p th:errors="*{weights}"></p>
         <input type="text" placeholder="Weights" th:field="*{weights}">
         <input type="hidden"  th:field="*{id}">
 

@@ -1,12 +1,17 @@
 package com.rst.radiostationdata;
 
+import javax.validation.constraints.NotBlank;
 import java.util.UUID;
 
-public class Song {
 
+public class Song {
+    @NotBlank(message = "Artist name cannot be blank")
     private String artist ;
+    @NotBlank(message = "Song title cannot be blank")
     private String title;
-    private double weights;
+    @NotBlank(message = "Weights cannot be blank")
+
+    private String weights;
     private String id;
 
     public Song() {
@@ -29,11 +34,11 @@ public class Song {
         this.title = title;
     }
 
-    public double getWeights() {
+    public String getWeights() {
         return weights;
     }
 
-    public void setWeights(double weights) {
+    public void setWeights(String weights) {
         this.weights = weights;
     }
 
